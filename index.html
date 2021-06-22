@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plandell</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@1,500&family=Cutive+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/st.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body">
+
+    <nav>
+        <a href="#topo"><img src="logo1.png" alt="plandell" width="150px"></a>
+        <ul>
+            <li><a href="#Sobre">Sobre</a></li>
+            <li><a href="#Servicos">Serviços</a></li>
+            <li><a href="#Entregas">Entregas</a></li>
+            <li><a href="#Contato">Contato</a></li>
+        </ul>
+    </nav>
+    <header id="topo">
+        <h1>Serviço com Qualidade e Segurança</h1>
+        <ul>
+            <li>Entrega de encomendas mercadorias e documentos</li> <br>
+            <li>Gerenciamento de redes sociais e websites</li><br>
+            <li>Criação de Sites e Ecommerce</li><br>
+            <li>Confecção de artes gráficas (banners, folders, cartões de visitas, convites de festas e eventos).</li>
+
+        </ul>
+    </header>
+    <section id="Sobre">
+        <h2>Sobre</h2>
+        <p>Empresa com foco em trazer a melhor experiência em Logistica no Estado do Espirito Santo, e com um Amplo conhecimento no mundo digital para dar aquele UP na sua Empresa</p>
+
+    </section>
+
+    <section id="Servicos">
+        <h2>Serviços</h2>
+        
+        <div class="container">
+            <div>
+                <img src="img/entre.png" alt="Motoboy" width="80px">
+                <h3>Delivery</h3>
+
+                    <p>Entregas de documentos, presentes, pacotes e artigos pessoais, desde que sejam de pequeno ou médio porte </p>
+                
+            </div>
+
+            <div>
+                <img src="img/net.svg" alt="Motoboy" width="80px">
+                <h3>Web Design</h3>
+                <p>Serviços de Criação de site, Ecommerce, Criação de Sistemas Automatizados para Empresas e post para Redes Socias em Geral</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Entregas">
+        <h2>Entregas</h2>
+        <h3>Faça O Seu Orçamento</h3>
+        <p>O frete Rota é o frete que não tem um horário definido para ser entregue é de acordo com a rota do motoboy no dia. 
+        </p>
+        <p>O frete Express é o cliente que define o horário para está recebendo o seu pedido </p>
+
+
+        <form class="cont" id="form1">
+            <label for="busca">Local De Retirada: </label> <br>
+            <select name="busca" id="busca">
+                <option value="vilavelha">Vila Velha</option>
+                <option value="cariacica">Cariacica</option>
+            </select>
+            <br>
+            <label for="entrega">Local De Entrega</label> <br>
+
+
+            <select name="entrega" id="entrega">
+                <option value="vilavelha">Vila Velha</option>
+                <option value="vitoria">Vitória</option>
+                <option value="serra">Serra</option>
+                <option value="cariacica">Cariacia</option>
+                <option value="viana">Viana</option>
+            </select>
+            <br>
+            Tipo de Frete: 
+            <select name="frete" id="rola">
+                <option value="rota">Rota</option>
+                <option value="express">Express</option>
+            </select>
+                <input type="submit" value="CalcularFrete" id="sub">
+        </form>
+        <p id="valor"> Os Valores podem sofrer alterações de acordo com o dia para mais informações <a href="https://wa.me/message/ZAOGTZQUZ43VB1" target="_blank" >Clique aqui</a> </p>
+        <br>
+        <a href="pdf.html" class="botao">Contratar O Serviço</a>
+
+    </section>
+   
+    <section id="Contato">
+        <h2>Contato</h2>
+        <p>Entre em Contato para mais informações</p>
+        <div id="fala">
+            <div>
+                <a href="https://wa.me/message/ZAOGTZQUZ43VB1" target="_blank" >
+                    <img src="img/p3.png" alt="zap" width="40px">
+                    <h3>Whatsapp</h3>
+                </a>
+            </div>
+            <div>
+                <a href="mailto:plandellservice@gmail.com">
+                <img src="img/p4.jpg" alt="zap" width="40px">
+                <h3>Email</h3>
+            </a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <footer>
+        <p>  Desenvolvido por Kaio Plandel</p>
+    </footer>
+
+    <script>
+
+        var form1 = document.getElementById("form1")
+
+        form1.addEventListener("submit",function(event) {
+            event.preventDefault()
+           
+            var busca = document.getElementById('busca').value 
+            var entrega = document.getElementById('entrega').value
+            var frete = document.getElementById("rola").value
+            var valor = document.getElementById('valor')
+            
+            if(busca == 'vilavelha' && entrega == "vilavelha") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 10
+                }
+                else {
+                    preco = 25
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+            }
+
+            else if(busca == 'vilavelha' && entrega == "cariacica") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 15
+                }
+                else {
+                    preco = 30
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'vilavelha' && entrega == "vitoria") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 18
+                }
+                else {
+                    preco = 25
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'vilavelha' && entrega == "serra") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 30
+                }
+                else {
+                    preco = 45
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'vilavelha' && entrega == "viana") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 25
+                }
+                else {
+                    preco = 35
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'cariacia' && entrega == "cariacica") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 15
+                }
+                else {
+                    preco = 25
+                }
+            }else if(busca == 'cariacica' && entrega == "vilavelha") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 15
+                }
+                else {
+                    preco = 25
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'cariacica' && entrega == "viana") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 25
+                }
+                else {
+                    preco = 35
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == 'cariacica' && entrega == "vitoria") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 15
+                }
+                else {
+                    preco = 25
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+
+            }else if(busca == "cariacica" && entrega == "serra") {
+                let preco = 0
+                if(frete == 'rota'){
+                    preco = 30
+                }
+                else {
+                    preco = 45
+                }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+            
+            }
+            
+        })
+    </script>
+</body>
+</html>
