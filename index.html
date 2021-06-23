@@ -62,29 +62,36 @@
     <section id="Entregas">
         <h2>Entregas</h2>
         <h3>Faça O Seu Orçamento</h3>
-        <p>O frete Rota é o frete que não tem um horário definido para ser entregue é de acordo com a rota do motoboy no dia. 
-        </p>
-        <p>O frete Express é o cliente que define o horário para está recebendo o seu pedido </p>
+        <div id="para">
+            <p>Frete Rota: frete sem horário definido.
+            </p>
+            <p>Frete Express: Cliente define o horário</p>
+        </div>
 
 
         <form class="cont" id="form1">
-            <label for="busca">Local De Retirada: </label> <br>
-            <select name="busca" id="busca">
-                <option value="vilavelha">Vila Velha</option>
-                <option value="cariacica">Cariacica</option>
-            </select>
+            <div id="frete-bloco">
+            <div class="bloco">
+                <label for="busca">Local de Retirada: </label> <br>
+                <select name="busca" id="busca">
+                    <option value="vilavelha">Vila Velha</option>
+                    <option value="cariacica">Cariacica</option>
+                </select>
+            </div>
             <br>
-            <label for="entrega">Local De Entrega</label> <br>
-
-
-            <select name="entrega" id="entrega">
-                <option value="vilavelha">Vila Velha</option>
-                <option value="vitoria">Vitória</option>
-                <option value="serra">Serra</option>
-                <option value="cariacica">Cariacia</option>
-                <option value="viana">Viana</option>
-            </select>
-            <br>
+            <div class="bloco">
+                
+                <label for="entrega">Local De Entrega</label> <br>
+                <select name="entrega" id="entrega">
+                    <option value="vilavelha">Vila Velha</option>
+                    <option value="vitoria">Vitória</option>
+                    <option value="serra">Serra</option>
+                    <option value="cariacica">Cariacia</option>
+                    <option value="viana">Viana</option>
+                </select>
+                <br>
+            </div>
+        </div>
             Tipo de Frete: 
             <select name="frete" id="rola">
                 <option value="rota">Rota</option>
@@ -142,6 +149,8 @@
                 else {
                     preco = 25
                 }
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
             }
 
@@ -154,7 +163,8 @@
                     preco = 30
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "vitoria") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -164,7 +174,8 @@
                     preco = 25
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "serra") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -174,7 +185,8 @@
                     preco = 45
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "viana") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -184,7 +196,8 @@
                     preco = 35
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'cariacia' && entrega == "cariacica") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -202,7 +215,8 @@
                     preco = 25
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'cariacica' && entrega == "viana") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -212,7 +226,8 @@
                     preco = 35
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == 'cariacica' && entrega == "vitoria") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -222,7 +237,8 @@
                     preco = 25
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }else if(busca == "cariacica" && entrega == "serra") {
                 let preco = 0
                 if(frete == 'rota'){
@@ -232,7 +248,8 @@
                     preco = 45
                 }
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
-            
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
             }
             
         })

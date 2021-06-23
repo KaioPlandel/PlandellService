@@ -110,7 +110,9 @@ header {
 #Entregas {
     padding-bottom: 20px;
     text-align: center;
-    background-color: #ED7A4D;
+    background-image: url("/Projeto/img/fundo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #Entregas h2 {
@@ -178,8 +180,20 @@ footer {
     justify-content: space-between
     
 }
-#Entregas p {
-    width: 70%;
+
+#frete-bloco {
+    display: flex;
+}
+
+.bloco {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+   
+}
+#Entregas #para p {
+    width: 45%;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.377);
     box-shadow: 2px 2px 3px black;
@@ -192,7 +206,7 @@ footer {
 
 
 #sub {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 #card input {
     text-align: center;
@@ -240,18 +254,14 @@ footer {
         flex-basis: 150px;
         padding: 0 10px;
     }
+}
 
-    #Contato {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: 500px;
-        margin: 0 auto;
-    }
+#Entregas #para {
+    display: flex;
 }
 
 #valor {
-    padding-top: 20px;
+    
     color: white;
 }
 
@@ -276,3 +286,4 @@ footer {
 #topo ul{
     list-style: none;
 }
+
