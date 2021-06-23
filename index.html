@@ -71,7 +71,7 @@
 
         <form class="cont" id="form1">
             <div id="frete-bloco">
-            <div class="bloco">local de entrega</div>
+            <div class="bloco">local de Retirada</div>
             <div class="bloco">
                 <label for="busca"> </label> <br>
                 <select name="busca" id="busca">
@@ -80,7 +80,7 @@
                 </select>
             </div>
             <br>
-            <div class="bloco">local de retirada</div>
+            <div class="bloco">local de Entrega</div>
             <div class="bloco">
                 
                 <label for="entrega"></label> <br>
@@ -201,7 +201,7 @@
                 valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
-            }else if(busca == 'cariacia' && entrega == "cariacica") {
+            }else if(busca == "cariacica" && entrega == "cariacica") {
                 let preco = 0
                 if(frete == 'rota'){
                     preco = 20
@@ -209,10 +209,14 @@
                 else {
                     preco = 30
                 }
+                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.backgroundColor = "black"
+                valor.style.color = "white"
+
             }else if(busca == 'cariacica' && entrega == "vilavelha") {
                 let preco = 0
                 if(frete == 'rota'){
-                    preco = 15
+                    preco = 20
                 }
                 else {
                     preco = 25
