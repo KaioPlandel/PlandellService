@@ -13,33 +13,37 @@
     </nav>
     <hr>
 <div id="body">
-    
-        <form action="#" id="form">
-            <h1>Dados Para Entrega</h1>
-            <input type="text" name="nome" id="nome" placeholder="Nome:">
-            <input type="number" name="numero" id="tel" placeholder="Tel: (00) 00000-0000">
-            <input type="text" name="rua" id="rua" placeholder="rua:">
-            <input type="number" name="num" id="num" placeholder="numero:">
-            <input type="text" name="bairro" id="bairro" placeholder="Bairro:">
-            <textarea name="info" id="info" cols="20" rows="5" placeholder="Informação Extra:"></textarea>
-            <select name="cidade" id="cidade">
-                <option value="vila-velha">Vila Velha</option>
-                <option value="vitoria">Vitória</option>
-                <option value="Serra">Serra</option>
-                <option value="cariacica">Cariacica</option>
-                <option value="cariacica-sede">Cariacica Sede</option>
-                <option value="viana">Viana</option>
-    
-            </select>
-            <input type="submit" name="Enviar" id="enviar" value="Enviar" onclick="gotowhatsapp()">
-    
-        </form>
+    <div id="body-form">
+        
+            <form action="#" id="form">
+                <h1>Dados Para Entrega</h1>
+                <input type="text" name="nome" id="nome" placeholder="Nome:">
+                <input type="number" name="numero" id="tel" placeholder="Tel: (00) 00000-0000">
+                <input type="text" name="rua" id="rua" placeholder="rua:">
+                <input type="number" name="num" id="num" placeholder="numero:">
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro:">
+                <textarea name="info" id="info" cols="20" rows="5" placeholder="Informação Extra:"></textarea>
+                <select name="cidade" id="cidade">
+                    <option value="vila-velha">Vila Velha</option>
+                    <option value="vitoria">Vitória</option>
+                    <option value="Serra">Serra</option>
+                    <option value="cariacica">Cariacica</option>
+                    <option value="cariacica-sede">Cariacica Sede</option>
+                    <option value="viana">Viana</option>
+        
+                </select>
+                <input type="submit" name="Enviar" id="enviar" value="Enviar" onclick="gotowhatsapp()">
+        
+            </form>
+    </div>
 </div>
    <hr>
-   
-    <footer>
-        <p>  Desenvolvido por Kaio Plandel</p>
-    </footer>
+   <section id="back">
+       <button><a href="/Projeto/index.html">VOLTAR</a> </button>
+   </section>
+   <footer>
+    <p>  Desenvolvido por Kaio Plandel</p>
+</footer>
 
     <script>
         function gotowhatsapp() {

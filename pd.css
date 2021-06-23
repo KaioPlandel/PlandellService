@@ -8,17 +8,38 @@
             background-image: url("img/fundo.svg");
             background-repeat: no-repeat;
             background-size: cover;
-            height: 80vh;
+            display: flex;
+        }
+        #body-form {
+            width: 80%;
+            height: 30%;
+            margin: auto;
+        }
+
+        #back {
+            background-color:white;
+            border-top: 1px solid black;
+            display: flex;
+            height: 30px;
+            align-content: center;
+        }
+
+        #back button{
+            border: 1px solid black;
+            width: 70px; 
             
         }
-        
-        #form {
+
+        #back button a {
+            text-decoration: none;
+        }
+        #form {   
             border-radius: 15px;
             box-shadow: 2px 2px 5px black;
             padding-top: 20px;
             padding-bottom: 5px;
-            width: 50vh;
-            margin: auto;
+            
+            
             background-color: rgba(255, 255, 255, 0.116);  
         }
 
