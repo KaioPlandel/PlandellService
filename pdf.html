@@ -22,7 +22,7 @@
                 <input type="text" name="rua" id="rua" placeholder="rua:">
                 <input type="number" name="num" id="num" placeholder="numero:">
                 <input type="text" name="bairro" id="bairro" placeholder="Bairro:">
-                <textarea name="info" id="info" cols="20" rows="5" placeholder="Informação Extra:"></textarea>
+                <input type="text" name="complemento" id="complemento" placeholder="Complemento">
                 <select name="cidade" id="cidade">
                     <option value="vila-velha">Vila Velha</option>
                     <option value="vitoria">Vitória</option>
@@ -32,6 +32,7 @@
                     <option value="viana">Viana</option>
         
                 </select>
+                <textarea name="info" id="info" cols="28" rows="5" placeholder="Dados Adicionais:"></textarea>
                 <input type="submit" name="Enviar" id="enviar" value="Enviar" onclick="gotowhatsapp()">
         
             </form>
@@ -46,22 +47,30 @@
 </footer>
 
     <script>
+        let letras = Math.random().toString(36).toUpperCase().replace(/[^A-Z]+/g, '').substr(0, 2);
+        let aleatorio = Math.floor( Math.random()*1000)
+
         function gotowhatsapp() {
             
             var name = document.getElementById("nome").value;
             var phone = document.getElementById("tel").value;
+            var rua = document.getElementById("rua").value;
             var num = document.getElementById("num").value;
             var bairro = document.getElementById("bairro").value;
+            var comp = document.getElementById("complemento").value;
             var infor = document.getElementById("info").value;
             var cidade = document.getElementById("cidade").value;
         
-            var url = "https://wa.me/5527999930874?text=" 
+            var url = "https://wa.me/?text=" 
+            + "Formulário de Entrega" + " n: " + letras + aleatorio + "%0a"
             + "Nome: " + name + "%0a"
             + "Telefone: " + phone + "%0a"
+            + "Rua: " + rua + "%0a"
             + "Bairro: " + bairro + "%0a"
             + "N: " + num + "%0a"
+            + "Complemento: " + comp + "%0a"
             + "Municipio: " + cidade + "%0a"
-            + "Complemento: " + infor;
+            + "Adicionais: " + infor;
             
         
             window.open(url, '_blank').focus();
