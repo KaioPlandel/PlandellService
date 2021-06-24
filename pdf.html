@@ -31,9 +31,7 @@
                     <option value="cariacica">Cariacica</option>
                     <option value="cariacica-sede">Cariacica Sede</option>
                     <option value="viana">Viana</option>
-        
                 </select>
-                <p id="aviso"></p>
                 <textarea name="info" id="info" cols="28" rows="5" placeholder="Dados Adicionais:"></textarea>
                 <input type="submit" name="Enviar" id="enviar" value="Enviar" onclick="gotowhatsapp()">
         
@@ -64,15 +62,7 @@
             var cidade = document.getElementById("cidade").value;
             var aviso = document.getElementById("aviso")
             if(cidade == "muni") {
-               aviso.style.backgroundColor = "white"
-               aviso.style.color = "red"
-               aviso.style.padding = "8px"
-               aviso.style.width = "50%"
-               aviso.style.display = "flex"
-               aviso.style.margin = "auto"
-               aviso.style.marginTop = "5px"
-               aviso.style.textAlign = "center"
-               aviso.innerText = "AVISO: Adicione o Município"
+               alert('Adicione o Município')
                
                 
             } else {
