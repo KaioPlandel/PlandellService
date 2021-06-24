@@ -15,12 +15,12 @@ nav ul li:active {
     background-color: #ED7A4D;
 }
 .botao {
-    color:black;
+    color:white;
     text-decoration: none;
     padding: 10px 30px;
     background-color: rgb(10, 153, 10);
     font-size: .9em;
-    border: 1px solid rgba(0, 0, 0, 0.404);
+    border: 1px solid #EDCA4D;
     border-radius: 4px;
 }
 
@@ -272,7 +272,7 @@ footer {
 }
 
 #sub {
-    background-color: black;
+    background-color: #EDCA4D;
     color: white;
     margin-bottom: 20px;
     width: 70hv;
