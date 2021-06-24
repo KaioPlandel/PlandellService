@@ -29,8 +29,6 @@
             <li>Entrega de encomendas mercadorias e documentos</li> <br>
             <li>Gerenciamento de redes sociais e websites</li><br>
             <li>Criação de Sites e Ecommerce</li><br>
-            <li>Confecção de artes gráficas (banners, folders, cartões de visitas, convites de festas e eventos).</li>
-
         </ul>
     </header>
     <section id="Sobre">
@@ -71,7 +69,7 @@
 
         <form class="cont" id="form1">
             <div id="frete-bloco">
-            <div class="bloco">local de Retirada</div>
+            <div class="bloco">Local de Retirada</div>
             <div class="bloco">
                 <label for="busca"> </label> <br>
                 <select name="busca" id="busca">
@@ -81,7 +79,7 @@
                 </select>
             </div>
             <br>
-            <div class="bloco">local de Entrega</div>
+            <div class="bloco">Local de Entrega</div>
             <div class="bloco">
                 
                 <label for="entrega"></label> <br>
@@ -99,10 +97,11 @@
         <br>
             Tipo de Frete: 
             <select name="frete" id="rola">
+                <option value="escolher">Escolher</option>
                 <option value="rota">Rota</option>
                 <option value="express">Express</option>
             </select>
-                <input type="submit" value="CalcularFrete" id="sub">
+                <input type="submit" value="Calcular Frete" id="sub">
         </form>
         <p id="valor"> Os Valores podem sofrer alterações de acordo com o dia para mais informações <a href="https://wa.me/message/ZAOGTZQUZ43VB1" target="_blank" >Clique aqui</a> </p>
         <br> <br>
@@ -112,7 +111,7 @@
    
     <section id="Contato">
         <h2>Contato</h2>
-        <p>Entre em Contato para mais informações</p>
+        <p>Entre em contato para mais informações</p>
         <div id="fala">
             <div>
                 <a href="https://wa.me/message/ZAOGTZQUZ43VB1" target="_blank" >
@@ -145,6 +144,12 @@
             var entrega = document.getElementById('entrega').value
             var frete = document.getElementById("rola").value
             var valor = document.getElementById('valor')
+
+            if(frete == 'escolher' || entrega == 'escolher' || busca == 'escolher') {
+                valor.innerText = 'Adicione os Dados Corretamente'
+                valor.style.backgroundColor = 'red'
+                valor.style.padding = "20px"
+            } else {
             
             if(busca == 'vilavelha' && entrega == "vilavelha") {
                 let preco = 0
@@ -154,9 +159,10 @@
                 else {
                     preco = 25
                 }
+                valor.style.padding = "20px"
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
             }
 
             else if(busca == 'vilavelha' && entrega == "cariacica") {
@@ -167,7 +173,8 @@
                 else {
                     preco = 30
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "vitoria") {
@@ -178,7 +185,8 @@
                 else {
                     preco = 25
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "serra") {
@@ -189,7 +197,8 @@
                 else {
                     preco = 45
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == 'vilavelha' && entrega == "viana") {
@@ -200,7 +209,8 @@
                 else {
                     preco = 35
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == "cariacica" && entrega == "cariacica") {
@@ -211,7 +221,8 @@
                 else {
                     preco = 30
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
 
@@ -223,7 +234,8 @@
                 else {
                     preco = 25
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == 'cariacica' && entrega == "viana") {
@@ -234,7 +246,8 @@
                 else {
                     preco = 35
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == 'cariacica' && entrega == "vitoria") {
@@ -245,7 +258,8 @@
                 else {
                     preco = 25
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
             }else if(busca == "cariacica" && entrega == "serra") {
@@ -256,9 +270,11 @@
                 else {
                     preco = 45
                 }
-                valor.innerText = `O valor do frete [${frete}] Buscando em ${busca} e Entregando em ${entrega} é R$${preco},00 `
+                valor.style.padding = "20px"
+                valor.innerText = `O valor do frete  [${frete}]  é R$${preco},00 `
                 valor.style.backgroundColor = "black"
                 valor.style.color = "white"
+            }
             }
             
         })

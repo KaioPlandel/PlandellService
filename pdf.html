@@ -22,8 +22,9 @@
                 <input type="text" name="rua" id="rua" placeholder="rua:">
                 <input type="number" name="num" id="num" placeholder="numero:">
                 <input type="text" name="bairro" id="bairro" placeholder="Bairro:">
-                <input type="text" name="complemento" id="complemento" placeholder="Complemento">
+                <input type="text" name="complemento" id="complemento" placeholder="Complemento:">
                 <select name="cidade" id="cidade">
+                    <option value="muni">Definir Município</option>
                     <option value="vila-velha">Vila Velha</option>
                     <option value="vitoria">Vitória</option>
                     <option value="Serra">Serra</option>
@@ -32,6 +33,7 @@
                     <option value="viana">Viana</option>
         
                 </select>
+                <p id="aviso"></p>
                 <textarea name="info" id="info" cols="28" rows="5" placeholder="Dados Adicionais:"></textarea>
                 <input type="submit" name="Enviar" id="enviar" value="Enviar" onclick="gotowhatsapp()">
         
@@ -60,8 +62,21 @@
             var comp = document.getElementById("complemento").value;
             var infor = document.getElementById("info").value;
             var cidade = document.getElementById("cidade").value;
-        
-            var url = "https://wa.me/?text=" 
+            var aviso = document.getElementById("aviso")
+            if(cidade == "muni") {
+               aviso.style.backgroundColor = "white"
+               aviso.style.color = "red"
+               aviso.style.padding = "8px"
+               aviso.style.width = "50%"
+               aviso.style.display = "flex"
+               aviso.style.margin = "auto"
+               aviso.style.marginTop = "5px"
+               aviso.style.textAlign = "center"
+               aviso.innerText = "AVISO: Adicione o Município"
+               
+                
+            } else {
+            var url = "https://wa.me/5527999930874?text=" 
             + "Formulário de Entrega" + "%0a"
             + "Protocolo n: " + letras + "-" + aleatorio + "%0a"
             + "%0a"
@@ -76,7 +91,9 @@
             
         
             window.open(url, '_blank').focus();
+            }
         }
+
         </script>
 </body>
 </html>
