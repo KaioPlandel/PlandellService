@@ -21,11 +21,11 @@
                      Frete <strong>Rota</strong> Tempo estimado para entrega até as 18:00h</strike>
                     Se por Motivos desconhecidos não for entregue até o horário previsto, o motoboy entrará em contato com o cliente para concluir a entrega.
                 </em></p>
-                <input type="text" name="nome" id="nome" placeholder="Nome:">
-                <input type="number" name="numero" id="tel" placeholder="Tel: (00) 00000-0000">
-                <input type="text" name="rua" id="rua" placeholder="rua:">
-                <input type="number" name="num" id="num" placeholder="numero:">
-                <input type="text" name="bairro" id="bairro" placeholder="Bairro:">
+                <input type="text" name="nome" id="nome" placeholder="Nome:" required>
+                <input type="number" name="numero" id="tel" placeholder="Tel: (00) 00000-0000" required>
+                <input type="text" name="rua" id="rua" placeholder="rua:" required>
+                <input type="number" name="num" id="num" placeholder="numero:" required>
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro:" required>
                 <input type="text" name="complemento" id="complemento" placeholder="Complemento:">
                 <select name="cidade" id="cidade">
                     <option value="muni">Definir Município</option>
@@ -73,15 +73,15 @@
             } else {
             var url = "https://wa.me/5527999930874?text=" 
             + "Formulário de Entrega" + "%0a"
-            + "Protocolo n: " + letras + "-" + aleatorio + "%0a"
+            + "Protocolo n: *" + letras + "-" + aleatorio + "*%0a"
             + "%0a"
             + "Nome: " + name + "%0a"
             + "Telefone: " + phone + "%0a"
-            + "Rua: " + rua + "%0a"
+            + "Rua: *" + rua + "*%0a"
             + "n: " + num + "%0a"
-            + "Bairro: " + bairro + "%0a"
+            + "Bairro: *" + bairro + "*%0a"
             + "Complemento: " + comp + "%0a"
-            + "Municipio: " + cidade + "%0a"
+            + "Municipio: *" + cidade + "*%0a"
             + "Adicionais: " + infor;
             
         
