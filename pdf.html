@@ -70,6 +70,7 @@
             var cidade = document.getElementById("cidade").value;
             var aviso = document.getElementById("aviso")
             if(cidade == "muni") {
+                
                 cidade = prompt('Qual é o Município: ') 
                 var url = "https://wa.me/5527999930874?text=" 
             + "Formulário de Entrega" + "%0a"
@@ -83,9 +84,11 @@
             + "Complemento: " + comp + "%0a"
             + "Municipio: *" + cidade + "*%0a"
             + "Adicionais: " + infor;
+
             window.open(url, '_blank').focus
                
             } else {
+
             var url = "https://wa.me/5527999930874?text=" 
             + "Formulário de Entrega" + "%0a"
             + "Protocolo n: *" + letras + "-" + aleatorio + "*%0a"
@@ -98,8 +101,7 @@
             + "Complemento: " + comp + "%0a"
             + "Municipio: *" + cidade + "*%0a"
             + "Adicionais: " + infor;
-            
-        
+
             window.open(url, '_blank').focus();
             }
         }
