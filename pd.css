@@ -84,10 +84,10 @@
             margin-top: 15px;
             padding: 5px;
             border-radius: 10px;
-            background-color:red;
+            background-color:rgb(10, 153, 10);
             border: 2px solid black;
             color: white;
-            font-size: 3vh;     
+            font-size: 1.1em;     
         }
 
         #form #enviar:focus {

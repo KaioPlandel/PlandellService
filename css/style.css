@@ -20,7 +20,7 @@ nav ul li:active {
     padding: 10px 30px;
     background-color: rgb(10, 153, 10);
     font-size: .9em;
-    border: 1px solid #EDCA4D;
+    border: 2px solid #EDCA4D;
     border-radius: 4px;
 }
 
@@ -30,7 +30,7 @@ nav ul li:active {
     padding: 10px 30px;
     background-color: rgb(10, 153, 10);
     font-size: .9em;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 /* Navegação */
