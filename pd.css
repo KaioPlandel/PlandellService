@@ -5,6 +5,7 @@
         }
         
         #body {
+            padding-top: 20px;
             background-image: url("img/fundo.svg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -17,30 +18,36 @@
         }
 
         #back {
-            background-color:white;
-            border-top: 1px solid black;
-            display: flex;
-            height: 30px;
-            align-content: center;
+            background-color:rgba(255, 255, 255, 0);
+            text-align: right;
         }
 
-        #back button{
-            border: 1px solid black;
-            width: 70px; 
-            
-        }
+        
 
-        #back button a {
+        #back a {
             text-decoration: none;
+            color:  black;
+        }
+
+        #back  p{
+            font-size: 1.2em;
+            font-family:'Times New Roman', Times, serif;
+            font-weight:600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(198, 212, 216);
+            border-radius: 3px;
+            width: 20%;
+            text-align: center;
+            float: right;
         }
         #form {   
             border-radius: 15px;
             box-shadow: 2px 2px 5px black;
             padding-top: 20px;
             padding-bottom: 5px;
-            
-            
             background-color: rgba(255, 255, 255, 0.116);  
+
         }
 
         #form h1{
@@ -106,9 +113,30 @@ nav {
     padding-bottom: 20px;
 }
 
+#dica1 p{
+   text-align: center; 
+   color:white;
+}
+
+#dica{
+    display: flex;
+    margin: auto;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    
+}
+
+#dica1 {
+    background-color:#1E1803;
+    padding-bottom: 5px;
+    margin-bottom: 1px;
+}
+
 footer {
     text-align: center;
     background-color: white;
+    
 }
 
 footer p{
@@ -121,7 +149,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 h2 {
