@@ -19,7 +19,7 @@
 <div id="body">
     <div id="body-form">
         
-            <form action="#" id="form" autocomplete="off">
+            <form action="#" id="form" autocomplete="off" onsubmit="gotowhatsapp()">
                 <h1 style="font-family: cursive;">Dados Para Entrega</h1>
                 <input type="text" name="nome" id="nome" placeholder="Nome:" required>
                 <input type="tel" name="numero" id="tel" placeholder="Tel: (00) 00000-0000" required>
@@ -27,8 +27,9 @@
                 <input type="number" name="num" id="num" placeholder="numero:" required>
                 <input type="text" name="bairro" id="bairro" placeholder="Bairro:" required>
                 <input type="text" name="complemento" id="complemento" placeholder="Complemento:">
-                <select name="cidade" id="cidade">
-                    <option value="muni">Definir Município</option>
+                <select name="cidade" id="cidade" required >
+                    <option value="muni" selected disabled hidden >Definir Município</option>
+
                     <option value="vila-velha">Vila Velha</option>
                     <option value="vitoria">Vitória</option>
                     <option value="Serra">Serra</option>
@@ -37,7 +38,7 @@
                     <option value="viana">Viana</option>
                 </select>
                 <textarea name="info" id="info" cols="28" rows="5" placeholder="Dados Adicionais:"></textarea>
-                <input type="submit" name="Enviar" id="enviar" value="Enviar Endereço" onclick="gotowhatsapp()">
+                <input type="submit" name="Enviar" id="enviar" value="Enviar Endereço">
         
             </form>
             <div id="back"><p><a href="index.html">Voltar</a></p></a>   </div>
@@ -69,9 +70,21 @@
             var cidade = document.getElementById("cidade").value;
             var aviso = document.getElementById("aviso")
             if(cidade == "muni") {
-               alert('Adicione o Município')
+                cidade = prompt('Qual é o Município: ') 
+                var url = "https://wa.me/5527999930874?text=" 
+            + "Formulário de Entrega" + "%0a"
+            + "Protocolo n: *" + letras + "-" + aleatorio + "*%0a"
+            + "%0a"
+            + "Nome: " + name + "%0a"
+            + "Telefone: " + phone + "%0a"
+            + "Rua: *" + rua + "*%0a"
+            + "n: " + num + "%0a"
+            + "Bairro: *" + bairro + "*%0a"
+            + "Complemento: " + comp + "%0a"
+            + "Municipio: *" + cidade + "*%0a"
+            + "Adicionais: " + infor;
+            window.open(url, '_blank').focus
                
-                
             } else {
             var url = "https://wa.me/5527999930874?text=" 
             + "Formulário de Entrega" + "%0a"
